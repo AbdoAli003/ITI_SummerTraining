@@ -1,0 +1,8 @@
+DIO_DRIVER.o DIO_DRIVER.o: ../DIO_DRIVER.c ../DIO_DRIVER.h ../BITMATH.h \
+  ../STD_TYPES.h
+
+../DIO_DRIVER.h:
+
+../BITMATH.h:
+
+../STD_TYPES.h:
