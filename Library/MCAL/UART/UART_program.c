@@ -8,23 +8,23 @@
 void UART_voidInit()
 {
 	// 8 bit data mode
-	UCSRC = (1 << URSEL) | (1 << UCSZ0) | (1 << UCSZ1);
-	CLR_BIT(UCSRB,UCSZ2);
+	UCSRC = (1 << UCSRC_u8_URSEL) | (1 << UCSRC_u8_UCSZ0) | (1 << UCSRC_u8_UCSZ1);
+	CLR_BIT(UCSRB,UCSRB_u8_UCSZ2);
 	// 9600
 	UBRRL = 51;
 	// enable trans/recv
-	SET_BIT(UCSRB,TXEN);
-	SET_BIT(UCSRB,RXEN);
+	SET_BIT(UCSRB,UCSRB_u8_TXEN);
+	SET_BIT(UCSRB,UCSRB_u8_RXEN);
 	// async
 }
 void UART_voidSendData(u8 Copy_u8Data)
 {
-	while (!GET_BIT(UCSRA,UDRE));
+	while (!GET_BIT(UCSRA,UCSRA_u8_UDRE));
 		UDR = Copy_u8Data;
 }
 u8 UART_u8Recieve()
 {
-	while (!GET_BIT(UCSRA,RXC));
+	while (!GET_BIT(UCSRA,UCSRA_u8_RXC));
 		return UDR;
 }
 void UART_voidSendString(u8 Copy_u8PrintedData[])

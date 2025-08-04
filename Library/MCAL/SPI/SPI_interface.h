@@ -4,7 +4,7 @@
 #define MASTER	0
 #define SLAVE	1
 
-#define MODE 	SLAVE
+#define MODE 	MASTER
 void SPI_voidInit();
 u8 SPI_u8TransRecieve(u8 Copy_u8Data);
 void SPI_voidMasterInit();

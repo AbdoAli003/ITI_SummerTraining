@@ -13,9 +13,6 @@ void DIO_voidInit (void)
 	DIO_u8SetPinDirection(DIO_u8_PORTD, DIO_u8_PIN0 ,DIO_u8_INPUT);
 	DIO_u8SetPinDirection(DIO_u8_PORTD, DIO_u8_PIN1 ,DIO_u8_OUTPUT);
 
-	DIO_u8SetPinDirection(DIO_u8_PORTB, DIO_u8_PIN5 ,DIO_u8_INPUT);
-	DIO_u8SetPinDirection(DIO_u8_PORTB, DIO_u8_PIN6 ,DIO_u8_OUTPUT);
-	DIO_u8SetPinDirection(DIO_u8_PORTB, DIO_u8_PIN7 ,DIO_u8_INPUT);
 }
 
 u8  DIO_u8SetPinDirection (u8 Copy_u8PortId, u8 Copy_u8PinId ,u8 Copy_u8PinDirection)
